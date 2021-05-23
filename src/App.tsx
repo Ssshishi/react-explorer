@@ -10,6 +10,7 @@ function App(): JSX.Element {
       <BrowserRouter>
         <Routes />
       </BrowserRouter>
+      {/* GlobalStyles 全局样式 组件的方式带入 */}
       <GlobalStyles />
     </>
   );

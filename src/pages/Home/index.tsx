@@ -18,6 +18,8 @@ interface Repository {
 function Home(): JSX.Element {
   const [newRepo, setNewRepo] = useState('');
   const [inputError, setInputError] = useState('');
+
+  // 以函数形式初始化 很棒
   const [repositories, setRepositories] = useState<Repository[]>(() => {
     const storagedRepositories = localStorage.getItem(
       '@GithubExplorer:repositories'
@@ -42,10 +44,11 @@ function Home(): JSX.Element {
 
     try {
       if (!newRepo) {
-        setInputError('Digite o nome do repositório');
+        setInputError('enter the Repository name');
         return;
       }
 
+      // 解构赋值 用在API数据读取上 也非常棒 
       const { data } = await api.get<{ items: Repository[] }>(
         `search/repositories?q=${newRepo}&per_page=6`
       );
@@ -65,6 +68,8 @@ function Home(): JSX.Element {
       <img src={logoImg} alt="Github Explorer" />
       <S.Title>Explore repositórios no GitHub.</S.Title>
 
+      {/* 双感叹号才能真正的将他转换成对应的Boolean值，第一个感叹号是将其转化成Boolean类型的值，
+          但是这一操作得到的是其取反以后的值，再进行一次取反运算才能得到其对应真正的布尔值 */}
       <S.Form hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
           type="text"

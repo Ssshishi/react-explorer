@@ -54,6 +54,7 @@ export const Form = styled.form<FormProps>`
     transition: background-color 0.2s;
 
     &:hover {
+      /*  shade 混合着色 该颜色与黑色 */
       background: ${shade(0.2, '#04d361')};
     }
   }
