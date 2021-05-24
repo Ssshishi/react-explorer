@@ -28,6 +28,7 @@ module.exports = {
   rules: {
     'import/prefer-default-export': 'off',
     'linebreak-style': 'off',
+    'no-console': 'off',
     'prettier/prettier': [
       'warn',
       {

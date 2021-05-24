@@ -1,6 +1,6 @@
 module.exports =  {
-  semi: true,  // Ponto e vírgula
-  singleQuote: true,  // Aspas simples ou duplas
-  arrowParens: 'avoid', // Chaves em volta dos retornos únicos
-  trailingComma: 'none', // Ultima virgula 
+  semi: true,  // 分号
+  singleQuote: true,  // 单引号或双引号
+  arrowParens: 'avoid', // 箭头函数
+  trailingComma: 'none', // 最后一个逗号
 }

@@ -48,7 +48,7 @@ function Home(): JSX.Element {
         return;
       }
 
-      // 解构赋值 用在API数据读取上 也非常棒 
+      // 解构赋值 用在API数据读取上 也非常棒
       const { data } = await api.get<{ items: Repository[] }>(
         `search/repositories?q=${newRepo}&per_page=6`
       );
@@ -59,25 +59,26 @@ function Home(): JSX.Element {
       setNewRepo('');
       setInputError('');
     } catch (err) {
-      setInputError('Erro na busca por esse repositório');
+      setInputError('Error searching for this repository');
     }
   }
 
   return (
     <>
       <img src={logoImg} alt="Github Explorer" />
-      <S.Title>Explore repositórios no GitHub.</S.Title>
+      <S.Title>Github搜索仓库</S.Title>
 
       {/* 双感叹号才能真正的将他转换成对应的Boolean值，第一个感叹号是将其转化成Boolean类型的值，
-          但是这一操作得到的是其取反以后的值，再进行一次取反运算才能得到其对应真正的布尔值 */}
+          但是这一操作得到的是其取反以后的值，再进行一次取反运算才能得到其对应真正的布尔值
+       */}
       <S.Form hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
           type="text"
-          placeholder="Digite o nome do repositório."
+          placeholder="输入仓库名称"
           value={newRepo}
           onChange={e => setNewRepo(e.target.value)}
         />
-        <button type="submit">Pesquisar</button>
+        <button type="submit">搜索</button>
       </S.Form>
 
       {inputError && <S.Error>{inputError}</S.Error>}
