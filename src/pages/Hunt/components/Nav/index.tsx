@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import * as S from './styles';
 
 function Nav(): JSX.Element {
   useEffect(() => {
@@ -6,7 +7,7 @@ function Nav(): JSX.Element {
   }, []);
   return (
     <div className="nav">
-      <div>111</div>
+      <S.Header>111</S.Header>
     </div>
   );
 }
