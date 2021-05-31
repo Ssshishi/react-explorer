@@ -5,9 +5,30 @@ interface FormProps {
   hasError: boolean;
 }
 
+export const Header = styled.div`
+  max-width: 700px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+  }
+  a {
+    margin-top: 85px;
+    text-decoration: none;
+    div {
+      font-size: 24px;
+      color: blueviolet;
+    }
+  }
+`;
+
 export const Title = styled.h1`
   max-width: 500px;
-  margin-top: 80px;
+  margin-top: 40px;
   line-height: 56px;
 
   font-size: 48px;

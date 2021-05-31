@@ -3,7 +3,7 @@ import { FiChevronRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
-import logoImg from '../../assets/images/logo.svg';
+import logoImg from '../../assets/images/princess.png';
 import * as S from './styles';
 
 interface Repository {
@@ -65,7 +65,12 @@ function Home(): JSX.Element {
 
   return (
     <>
-      <img src={logoImg} alt="Github Explorer" />
+      <S.Header>
+        <img src={logoImg} alt="Github Explorer" />
+        <Link to="/hunt/">
+          <div>git小猎手</div>
+        </Link>
+      </S.Header>
       <S.Title>Github搜索仓库</S.Title>
 
       {/* 双感叹号才能真正的将他转换成对应的Boolean值，第一个感叹号是将其转化成Boolean类型的值，
