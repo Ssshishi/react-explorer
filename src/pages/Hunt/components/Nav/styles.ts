@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-export const Header = styled.div`
-  div {
-    width: 720px;
-  }
-`;
-
 export const Nav = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -16,39 +10,45 @@ export const Nav = styled.div`
       float: left;
       width: 75px;
       height: 75px;
+      border-radius: 35px;
     }
     div {
       float: right;
-      margin-left: 10px;
+      margin-top: 10px;
+      margin-left: 5px;
+      h2 {
+        margin-left: 1px;
+      }
+      div {
+        font-size: 20px;
+        color: #b7bcc0;
+      }
     }
   }
 
   .nav-btn {
+    height: 75px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     button {
-      width: 136px;
-      height: 60px;
+      height: 40px;
+      margin-left: 10px;
       padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      border: none;
+      border-radius: 12px;
       img {
         width: 14px;
         height: 14px;
       }
-      span {
-        font-size: 24px;
+      strong {
+        margin-left: 5px;
+        font-size: 18px;
+        line-height: 40px;
+        color: #ffffff;
       }
     }
-  }
-`;
-
-export const NavTitle = styled.div`
-  img {
-    float: left;
-    width: 75px;
-    height: 75px;
-  }
-  div {
-    float: right;
-    margin-left: 10px;
   }
 `;

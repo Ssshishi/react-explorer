@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 
 import Princess from '../../../../assets/images/princess.png';
+import gitPng from '../../../../assets/images/hub.png';
+import starPng from '../../../../assets/images/star.png';
 import * as S from './styles';
 
 function Nav(): JSX.Element {
@@ -11,15 +13,17 @@ function Nav(): JSX.Element {
   const share = [
     {
       value: 'View Source',
-      img: '../../../../assets/images/github.png',
+      img: gitPng,
       to: 'https://github.com/Ssshishi/react-explorer',
-      id: 1
+      id: 1,
+      background: '#2e3338'
     },
     {
       value: 'Star Me',
-      img: '../../../../assets/images/star.png',
+      img: starPng,
       to: 'https://github.com/Ssshishi',
-      id: 2
+      id: 2,
+      background: '#04a2ea'
     }
   ];
 
@@ -33,7 +37,7 @@ function Nav(): JSX.Element {
       <div className="nav-title">
         <img src={Princess} alt="" />
         <div>
-          <h1>GitHunt</h1>
+          <h2>GitHunt</h2>
           <div>Most starred projects on GitHub</div>
         </div>
       </div>
@@ -43,18 +47,17 @@ function Nav(): JSX.Element {
         {share.map(item => (
           <button
             key={item.id}
+            style={{ backgroundColor: item.background }}
             type="button"
             onClick={() => {
               handleClick(item.to);
             }}
           >
             <img src={item.img} alt="" />
-            <span>{item.value}</span>
+            <strong>{item.value}</strong>
           </button>
         ))}
       </div>
-
-      <S.Header>1</S.Header>
     </S.Nav>
   );
 }
