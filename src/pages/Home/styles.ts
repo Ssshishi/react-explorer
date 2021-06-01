@@ -18,10 +18,13 @@ export const Header = styled.div`
   }
   a {
     margin-top: 85px;
-    text-decoration: none;
+    background: #299ddc;
+    padding: 5px 15px;
+    border-radius: 12px;
     div {
-      font-size: 24px;
-      color: blueviolet;
+      font-size: 20px;
+      line-height: 38px;
+      color: #ffffff;
     }
   }
 `;
