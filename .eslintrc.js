@@ -6,17 +6,22 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:prettier/recommended'
   ],
+
   plugins: ['react', '@typescript-eslint', 'jest'],
+
   env: {
     browser: true,
     es6: true,
     jest: true,
   },
+
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
+
   parser: '@typescript-eslint/parser',
+
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -25,6 +30,7 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
+
   rules: {
     'import/prefer-default-export': 'off',
     'linebreak-style': 'off',
@@ -36,4 +42,5 @@ module.exports = {
       },
     ],
   },
+
 };
